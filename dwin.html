@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Won!</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="win-section">
+        <h1>🎉 Congratulations! 🎉</h1>
+        <p class="score-text">Your score is: <span id="score"></span>%</p>
+        <p class="emojis">🏆👏😃🎈✨</p>
+      <div class="actionButtons">  <a href="./decimals.html" class="play-again">Play Again</a>
+        <a href="./geometric.html" class="play-again">proceed</a></div>
+    </section>
+
+    <script>
+        document.getElementById('score').innerText = localStorage.getItem('score');
+    </script>
+</body>
+</html>

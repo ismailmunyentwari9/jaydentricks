@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Decimals</title>
+</head>
+<body>
+    <section>
+        <div class="bar">
+            <span class="links">
+                <a href="./index.html"><span>Home</span></a>
+                <a href="./commands.html"><span>Commands</span></a>
+            </span>
+            <div class="symbols">
+                <span>➕</span>
+                <span>➖</span>
+                <span>✖</span>
+                <span>➗</span>
+            </div>
+            <span>Decimals Section</span>
+        </div>
+        <div class="questions">
+            <form id="quizForm">
+                <!-- Decimal questions -->
+                <div class="sub-quetions">
+                    <p>Q1: 12.5 + 8.3 = ?</p>
+                    <input type="number" step="0.01" name="q1" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q2: 15.2 - 7.7 = ?</p>
+                    <input type="number" step="0.01" name="q2" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q3: 9.1 × 3.3 = ?</p>
+                    <input type="number" step="0.01" name="q3" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q4: 24.8 ÷ 4.2 = ?</p>
+                    <input type="number" step="0.01" name="q4" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q5: 16.7 + 14.9 = ?</p>
+                    <input type="number" step="0.01" name="q5" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q6: 30.4 - 19.3 = ?</p>
+                    <input type="number" step="0.01" name="q6" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q7: 8.2 × 7.4 = ?</p>
+                    <input type="number" step="0.01" name="q7" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q8: 49.5 ÷ 7.5 = ?</p>
+                    <input type="number" step="0.01" name="q8" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q9: 25.6 + 36.4 = ?</p>
+                    <input type="number" step="0.01" name="q9" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q10: 58.9 - 23.8 = ?</p>
+                    <input type="number" step="0.01" name="q10" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q11: 6.3 × 6.1 = ?</p>
+                    <input type="number" step="0.01" name="q11" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q12: 81.4 ÷ 9.2 = ?</p>
+                    <input type="number" step="0.01" name="q12" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q13: 45.8 + 55.2 = ?</p>
+                    <input type="number" step="0.01" name="q13" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q14: 72.5 - 48.3 = ?</p>
+                    <input type="number" step="0.01" name="q14" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q15: 7.1 × 8.3 = ?</p>
+                    <input type="number" step="0.01" name="q15" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q16: 64.8 ÷ 8.6 = ?</p>
+                    <input type="number" step="0.01" name="q16" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q17: 33.3 + 67.7 = ?</p>
+                    <input type="number" step="0.01" name="q17" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q18: 95.6 - 47.9 = ?</p>
+                    <input type="number" step="0.01" name="q18" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q19: 4.5 × 12.2 = ?</p>
+                    <input type="number" step="0.01" name="q19" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q20: 56.9 ÷ 7.3 = ?</p>
+                    <input type="number" step="0.01" name="q20" placeholder="Your Answer Here......">
+                </div>
+                <button type="button" onclick="checkAnswers()">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = [20.8, 7.5, 30.03, 5.9, 31.6, 11.1, 60.68, 6.6, 62.0, 35.1, 38.43, 8.85, 101.0, 24.2, 58.93, 7.53, 101.0, 47.7, 54.9, 7.79];
+            const userAnswers = Array.from(document.querySelectorAll('input[type="number"]')).map(input => Number(input.value));
+            let score = 0;
+
+            for (let i = 0; i < correctAnswers.length; i++) {
+                if (Math.abs(userAnswers[i] - correctAnswers[i]) < 0.01) {
+                    score += 1;
+                }
+            }
+
+            if (score >= 12) {
+                alert(`You won! Your score is: ${score*5}`);
+                localStorage.setItem('score', score*5);
+                window.location.href = 'dwin.html';
+            } else {
+                alert(`You failed! Your score is: ${score*5}`);
+                localStorage.setItem('score', score*5);
+                window.location.href = 'dfail.html';
+            }
+        }
+    </script>
+</body>
+</html>

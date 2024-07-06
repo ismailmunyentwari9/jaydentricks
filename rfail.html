@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry! You Failed!</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="fail-section">
+        <h1>😢 Sorry! You failed! 😢</h1>
+        <p class="score-text">Your score is: <span id="score"></span>%</p>
+        <p class="emojis">😔💔😞🤦‍♂️🔄</p>
+        <a href="./roots.html" class="play-again">Try Again</a>
+    </section>
+
+    <script>
+        document.getElementById('score').innerText = localStorage.getItem('score');
+    </script>
+</body>
+</html>

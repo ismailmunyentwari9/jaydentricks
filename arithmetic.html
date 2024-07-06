@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Arithmetic</title>
+</head>
+<body>
+    <section>
+        <div class="bar">
+            <span class="links">
+                <a href="./index.html"><span>Home</span></a>
+                <a href="./commands.html"><span>Commands</span></a>
+            </span>
+            <div class="symbols">
+                <span>➕</span>
+                <span>➖</span>
+                <span>✖</span>
+                <span>➗</span>
+            </div>
+            <span>Arithmetic Section</span>
+        </div>
+        <div class="questions">
+            <form id="quizForm">
+                <!-- Questions here (same as before) -->
+                <div class="sub-quetions">
+                    <p>Q1: 12 + 8 = ?</p>
+                    <input type="number" name="q1" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q2: 15 - 7 = ?</p>
+                    <input type="number" name="q2" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q3: 9 × 3 = ?</p>
+                    <input type="number" name="q3" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q4: 24 ÷ 4 = ?</p>
+                    <input type="number" name="q4" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q5: 16 + 14 = ?</p>
+                    <input type="number" name="q5" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q6: 30 - 19 = ?</p>
+                    <input type="number" name="q6" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q7: 8 × 7 = ?</p>
+                    <input type="number" name="q7" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q8: 49 ÷ 7 = ?</p>
+                    <input type="number" name="q8" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q9: 25 + 36 = ?</p>
+                    <input type="number" name="q9" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q10: 58 - 23 = ?</p>
+                    <input type="number" name="q10" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q11: 6 × 6 = ?</p>
+                    <input type="number" name="q11" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q12: 81 ÷ 9 = ?</p>
+                    <input type="number" name="q12" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q13: 45 + 55 = ?</p>
+                    <input type="number" name="q13" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q14: 72 - 48 = ?</p>
+                    <input type="number" name="q14" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q15: 7 × 8 = ?</p>
+                    <input type="number" name="q15" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q16: 64 ÷ 8 = ?</p>
+                    <input type="number" name="q16" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q17: 33 + 67 = ?</p>
+                    <input type="number" name="q17" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q18: 95 - 47 = ?</p>
+                    <input type="number" name="q18" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q19: 4 × 12 = ?</p>
+                    <input type="number" name="q19" placeholder="Your Answer Here......">
+                </div>
+                <div class="sub-quetions">
+                    <p>Q20: 56 ÷ 7 = ?</p>
+                    <input type="number" name="q20" placeholder="Your Answer Here......">
+                </div>
+                <button type="button" onclick="checkAnswers()">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = [20, 8, 27, 6, 30, 11, 56, 7, 61, 35, 36, 9, 100, 24, 56, 8, 100, 48, 48, 8];
+            const userAnswers = Array.from(document.querySelectorAll('input[type="number"]')).map(input => Number(input.value));
+            let score = 0;
+
+            for (let i = 0; i < correctAnswers.length; i++) {
+                if (userAnswers[i] === correctAnswers[i]) {
+                    score += 1;
+                }
+            }
+
+            if (score >= 12) {
+                alert(`You won! Your score is: ${score*5}`);
+                localStorage.setItem('score', score*5);
+                window.location.href = 'win.html';
+            } else {
+                alert(`You failed! Your score is: ${score*5}`);
+                localStorage.setItem('score', score*5);
+                window.location.href = 'fail.html';
+            }
+        }
+    </script>
+</body>
+</html>
