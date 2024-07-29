@@ -49,9 +49,7 @@ button {
     border-radius: 15px;
 }
 
-.commands p {
-    font-size: 25px;
-}
+
 
 .commands p span {
     text-decoration: underline;
@@ -123,25 +121,25 @@ form button {
 }
 
 .win-section h1 {
-    font-size: 80px;
+    /* font-size: 80px; */
     font-family: 'Comic Sans MS', cursive, sans-serif;
     color: #4CAF50;
     margin-bottom: 20px;
 }
 
 .score-text {
-    font-size: 50px;
+    /* font-size: 50px; */
     font-family: 'Arial', sans-serif;
     color: #ff5722;
 }
 
 .emojis {
-    font-size: 50px;
+    /* font-size: 50px; */
     margin: 20px 0;
 }
 
 .play-again {
-    font-size: 30px;
+    /* font-size: 30px; */
     color: white;
     background-color: #ff9800;
     padding: 10px 20px;
@@ -169,25 +167,25 @@ form button {
 }
 
 .fail-section h1 {
-    font-size: 80px;
+    /* font-size: 80px; */
     font-family: 'Comic Sans MS', cursive, sans-serif;
     color: #f44336;
     margin-bottom: 20px;
 }
 
 .score-text {
-    font-size: 50px;
+    /* font-size: 50px; */
     font-family: 'Arial', sans-serif;
     color: #ff5722;
 }
 
 .emojis {
-    font-size: 50px;
+    /* font-size: 50px; */
     margin: 20px 0;
 }
 
 .play-again {
-    font-size: 30px;
+    /* font-size: 30px; */
     color: white;
     background-color: #ff5722;
     padding: 10px 20px;
